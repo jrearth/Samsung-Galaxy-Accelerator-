@@ -1,4 +1,20 @@
 # The Codebook
 
-This analysis does not alter the Data at all all it does is just compile and tidy the data into a nice and readable format.
-The input is described in the README.txt of the downloaded input
+Source of the original data:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Process
+The script run_analysis.R performs the following process to clean up the data and create tiny data sets:
+
+Merge the training and test sets to create one data set.
+
+Reads features.txt and uses only the measurements on the mean and standard deviation for each measurement.
+
+Reads activity_labels.txt and applies human readable activity names to name the activities in the data set.
+
+Labels the data set with descriptive names. (Names are converted to lower case; underscores and brackets are removed.)
+
+Merges the features with activity labels and subject IDs. The result is saved as tidyData.txt.
+
+The average of each measurement for each activity and each subject is merged to a second data set. The result is saved as tidyData2.txt.
